@@ -1,12 +1,12 @@
 <script setup lang="ts">
 import HelloWorld from "./components/HelloWorld.vue";
 import { onMounted } from "vue";
-
+let testNum = 1;
+const testHandle = () => {
+  console.log("testNum");
+  throw new Error("test");
+};
 onMounted(() => {
-  let testNum = null;
-  if (testNum.length > 0) {
-    console.log("报错了");
-  }
 });
 </script>
 
@@ -20,7 +20,7 @@ onMounted(() => {
     </a>
   </div>
   <HelloWorld msg="Vite + Vue" />
-  <div>testNum</div>
+  <div @click="testHandle">{{ testNum }}</div>
 </template>
 
 <style scoped>
