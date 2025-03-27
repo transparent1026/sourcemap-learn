@@ -3,10 +3,10 @@ import HelloWorld from "./components/HelloWorld.vue";
 import { onMounted } from "vue";
 
 onMounted(() => {
-  // let testNum = null;
-  // if (testNum.length > 0) {
-  //   console.log("报错了");
-  // }
+  let testNum = null;
+  if (testNum.length > 0) {
+    console.log("报错了");
+  }
 });
 </script>
 
@@ -20,7 +20,7 @@ onMounted(() => {
     </a>
   </div>
   <HelloWorld msg="Vite + Vue" />
-  <!-- <div>testNum</div> -->
+  <div>testNum</div>
 </template>
 
 <style scoped>
